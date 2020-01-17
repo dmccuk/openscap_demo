@@ -31,7 +31,9 @@ Feel free to change any of the variables to your own specifications.
 
 Check the differences between the two reports. What are they? As you scroll down the reports, click on the issues and see them expand to show you how to resolve them.
 
-If you want to make a manual update and see the results, do the following:
+### Further testing:
+
+If you want to make a manual update and see the results, try the following:
 
 ````
 $ ssh -i sshkey ec2-user@you-aws-instance-ip
