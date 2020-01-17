@@ -36,7 +36,7 @@ Check the differences between the two reports. What are they? As you scroll down
 If you want to make a manual update and see the results, try the following:
 
 ````
-$ ssh -i sshkey ec2-user@you-aws-instance-ip
+$ ssh -i sshkey ec2-user@your-aws-instance-ip
 ...
 $ sudo -i
 # vi /etc/ssh/sshd_config
