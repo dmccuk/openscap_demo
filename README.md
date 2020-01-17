@@ -1,4 +1,4 @@
-![Alt text](openscap.PNG?){:height="50%" width="50%"}
+![Alt text](openscap.PNG?)
 
 ## Openscap demo code
 
