@@ -1,10 +1,10 @@
-## openscap_demo
+## Openscap demo code
 
 This demo is all about installing and setting up OpenScap so you can check if your servers are secure and hardened. Similiar tool like CIS and Nessus offer the same reports, but openscap is free.
 
 More info: https://www.open-scap.org/
 
-## Pre-requisites and instructions:
+### Pre-requisites and instructions:
 
 To be able to use this demo code, I've written a very basic terraform module to manage the server creatiogn in AWS.
 
