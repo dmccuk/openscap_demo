@@ -1,4 +1,4 @@
-![Alt text](openscap.PNG?raw=true)
+![Alt text](openscap.PNG?raw=false)
 
 ## Openscap demo code
 >>>>>>> 6689063e86505944f2bc498693970d391fd4b65b
