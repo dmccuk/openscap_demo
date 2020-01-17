@@ -25,7 +25,7 @@ $ ssh-keygen -f sshkey #no passkey for the demo
 
 Feel free to change any of the variables to your own specifications.
 
-9) Once built, visit the webpage reports directory: **http://<your-IP-address>/reports**
+9) Once built, visit the webpage reports directory: **http://your-IP-address/reports
 10) check the difference between the two reports.
 
 If you want to make a manual update and see the results, do the following:
