@@ -1,3 +1,5 @@
+![Alt text](openscap.png?raw=true)
+
 ## openscap_demo
 
 This demo is all about installing and setting up OpenScap so you can check if your servers are secure and hardened. Similiar tool like CIS and Nessus offer the same reports, but openscap is free.
