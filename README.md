@@ -25,14 +25,29 @@ $ ssh-keygen -f sshkey #no passkey for the demo
 
 Feel free to change any of the variables to your own specifications.
 
-9) Once built, visit the webpage reports directory: **http://your-IP-address/reports
+9) Once built, visit the webpage reports directory: **http://your-aws-instance-ip/reports
 10) check the difference between the two reports.
 
 If you want to make a manual update and see the results, do the following:
 
 ````
-
-
+$ ssh -i sshkey ec2-user@you-aws-instance-ip
+...
+$ sudo -i
+# vi /etc/ssh/sshd_config
+#PermitEmptyPasswords no  #<-- UN-HASH
+save file
+# systemctl restart sshd
+# sudo oscap xccdf eval \
+ --profile xccdf_org.ssgproject.content_profile_ospp42 \
+ --results-arf arf.xml \
+ --report common-report.html \
+ /usr/share/xml/scap/ssg/content/ssg-rhel7-ds.xml
 # cp common-report.html /var/www/html/reports/post-common-report1.html
 ````
+Now go back and check the new report. At the time of writing this, there were 5 Criticals, after making this update, there will be only 4.
+
+## What next?
+Now you can work through the list and resolve all the issues until your server is as secure as it can be (while still letting you login to it!).
+
 
