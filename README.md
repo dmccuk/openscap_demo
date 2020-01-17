@@ -8,14 +8,12 @@ More info: https://www.open-scap.org/
 
 To be able to use this demo code, I've written a very basic terraform module to manage the server creatiogn in AWS.
 
+````
 1) git clone https://github.com/dmccuk/openscap_demo.git
 2) cd openscap_demo
 3) create your ssh key:
 
-````
 $ ssh-keygen -f sshkey #no passkey for the demo
-
-````
 
 4) Set your AWS access & secret keys in awscli - (https://linuxtechlab.com/easy-way-to-install-aws-cli-on-linux/)
 5) terraform init
@@ -26,7 +24,10 @@ $ ssh-keygen -f sshkey #no passkey for the demo
 Feel free to change any of the variables to your own specifications.
 
 9) Once built, visit the webpage reports directory: **http://your-aws-instance-ip/reports
-10) check the difference between the two reports.
+
+````
+
+Check the differences between the two reports. What are they? As you scroll down the reports, click on the issues and see them expand to show you how to resolve them.
 
 If you want to make a manual update and see the results, do the following:
 
