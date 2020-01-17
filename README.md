@@ -1,7 +1,6 @@
-![Alt text](openscap.PNG?raw=false)
+![Alt text](openscap.PNG?){:height="50%" width="50%"}
 
 ## Openscap demo code
->>>>>>> 6689063e86505944f2bc498693970d391fd4b65b
 
 This demo is all about installing and setting up OpenScap so you can check if your servers are secure and hardened. Similiar tool like CIS and Nessus offer the same reports, but openscap is free.
 
