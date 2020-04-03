@@ -12,7 +12,7 @@ To be able to use this demo code, I've written a very basic terraform module to 
 
 ````
 1) git clone https://github.com/dmccuk/openscap_demo.git
-2) cd openscap_demo
+2) cd openscap_demo/openscap_demo
 3) create your ssh key:
 
 $ ssh-keygen -f sshkey #no passkey for the demo
