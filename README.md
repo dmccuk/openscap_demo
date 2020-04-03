@@ -28,6 +28,90 @@ Feel free to change any of the variables to your own specifications.
 9) Once built, visit the webpage reports directory: **http://your-aws-instance-ip/reports
 
 ````
+If you get any issues during the build and subsequent running of the openscap scanning, it will probably be down to updated Profile names. Just run this command to list the latest ones and pick one in the list before updating /tmp/script.sh with the new profile name.
+
+```
+[root@ip-172-31-6-89 ~]# oscap info "/usr/share/xml/scap/ssg/content/ssg-rhel7-ds.xml"
+Document type: Source Data Stream
+Imported: 2019-11-29T16:29:18
+
+Stream: scap_org.open-scap_datastream_from_xccdf_ssg-rhel7-xccdf-1.2.xml
+Generated: (null)
+Version: 1.3
+Checklists:
+        Ref-Id: scap_org.open-scap_cref_ssg-rhel7-xccdf-1.2.xml
+WARNING: Datastream component 'scap_org.open-scap_cref_security-data-oval-com.redhat.rhsa-RHEL7.xml' points out to the remote 'https://www.redhat.com/security/data/oval/com.redhat.rhsa-RHEL7.xml'. Use '--fetch-remote-resources' option to download it.
+WARNING: Skipping 'https://www.redhat.com/security/data/oval/com.redhat.rhsa-RHEL7.xml' file which is referenced from datastream
+                Status: draft
+                Generated: 2019-11-29
+                Resolved: true
+                Profiles:
+                        Title: Health Insurance Portability and Accountability Act (HIPAA)
+                                Id: xccdf_org.ssgproject.content_profile_hipaa
+                        Title: DRAFT - ANSSI DAT-NT28 (high)
+                                Id: xccdf_org.ssgproject.content_profile_anssi_nt28_high
+                        Title: C2S for Red Hat Enterprise Linux 7
+                                Id: xccdf_org.ssgproject.content_profile_C2S
+                        Title: DRAFT - ANSSI DAT-NT28 (intermediary)
+                                Id: xccdf_org.ssgproject.content_profile_anssi_nt28_intermediary
+                        Title: PCI-DSS v3.2.1 Control Baseline for Red Hat Enterprise Linux 7
+                                Id: xccdf_org.ssgproject.content_profile_pci-dss
+                        Title: DRAFT - ANSSI DAT-NT28 (minimal)
+                                Id: xccdf_org.ssgproject.content_profile_anssi_nt28_minimal
+                        Title: VPP - Protection Profile for Virtualization v. 1.0 for Red Hat Enterprise Linux Hypervisor (RHELH)
+                                Id: xccdf_org.ssgproject.content_profile_rhelh-vpp
+                        Title: Standard System Security Profile for Red Hat Enterprise Linux 7
+                                Id: xccdf_org.ssgproject.content_profile_standard
+                        Title: OSPP - Protection Profile for General Purpose Operating Systems v4.2.1
+                                Id: xccdf_org.ssgproject.content_profile_ospp
+                        Title: Unclassified Information in Non-federal Information Systems and Organizations (NIST 800-171)
+                                Id: xccdf_org.ssgproject.content_profile_cui
+                        Title: DRAFT - ANSSI DAT-NT28 (enhanced)
+                                Id: xccdf_org.ssgproject.content_profile_anssi_nt28_enhanced
+                        Title: Red Hat Corporate Profile for Certified Cloud Providers (RH CCP)
+                                Id: xccdf_org.ssgproject.content_profile_rht-ccp
+                        Title: Australian Cyber Security Centre (ACSC) Essential Eight
+                                Id: xccdf_org.ssgproject.content_profile_e8
+                        Title: [DRAFT] DISA STIG for Red Hat Enterprise Linux Virtualization Host (RHELH)
+                                Id: xccdf_org.ssgproject.content_profile_rhelh-stig
+                        Title: DISA STIG for Red Hat Enterprise Linux 7
+                                Id: xccdf_org.ssgproject.content_profile_stig
+                        Title: NIST National Checklist Program Security Guide
+                                Id: xccdf_org.ssgproject.content_profile_ncp
+                        Title: Criminal Justice Information Services (CJIS) Security Policy
+                                Id: xccdf_org.ssgproject.content_profile_cjis
+                Referenced check files:
+                        ssg-rhel7-oval.xml
+                                system: http://oval.mitre.org/XMLSchema/oval-definitions-5
+                        ssg-rhel7-ocil.xml
+                                system: http://scap.nist.gov/schema/ocil/2
+                        security-data-oval-com.redhat.rhsa-RHEL7.xml
+                                system: http://oval.mitre.org/XMLSchema/oval-definitions-5
+        Ref-Id: scap_org.open-scap_cref_ssg-rhel7-pcidss-xccdf-1.2.xml
+WARNING: Skipping 'https://www.redhat.com/security/data/oval/com.redhat.rhsa-RHEL7.xml' file which is referenced from datastream
+                Status: draft
+                Generated: 2019-11-29
+                Resolved: true
+                Profiles:
+                        Title: PCI-DSS v3.2.1 Control Baseline for Red Hat Enterprise Linux 7
+                                Id: xccdf_org.ssgproject.content_profile_pci-dss_centric
+                Referenced check files:
+                        ssg-rhel7-oval.xml
+                                system: http://oval.mitre.org/XMLSchema/oval-definitions-5
+                        ssg-rhel7-ocil.xml
+                                system: http://scap.nist.gov/schema/ocil/2
+                        security-data-oval-com.redhat.rhsa-RHEL7.xml
+                                system: http://oval.mitre.org/XMLSchema/oval-definitions-5
+Checks:
+        Ref-Id: scap_org.open-scap_cref_ssg-rhel7-oval.xml
+        Ref-Id: scap_org.open-scap_cref_ssg-rhel7-ocil.xml
+        Ref-Id: scap_org.open-scap_cref_ssg-rhel7-cpe-oval.xml
+        Ref-Id: scap_org.open-scap_cref_ssg-rhel7-oval.xml000
+        Ref-Id: scap_org.open-scap_cref_ssg-rhel7-ocil.xml000
+        Ref-Id: scap_org.open-scap_cref_security-data-oval-com.redhat.rhsa-RHEL7.xml
+Dictionaries:
+        Ref-Id: scap_org.open-scap_cref_ssg-rhel7-cpe-dictionary.xml
+````
 
 Check the differences between the two reports. What are they? As you scroll down the reports, click on the issues and see them expand to show you how to resolve them.
 
